@@ -1,5 +1,5 @@
 {
-  "name": "@mongodb-solution-assurance/rectification",
+  "name": "@mongodb-solution-assurance/iam-rectification",
   "version": "1.0.0",
   "main": "dist/bin/index.js",
   "types": "dist/src/index.d.ts",

@@ -1,4 +1,4 @@
-## @mongodb-solution-assurance/rectification
+## @mongodb-solution-assurance/iam-rectification
 
 Kozen module that verifies and rectifies MongoDB IAM roles and permissions. Supports both SCRAM and X.509 authentication, provides IoC-ready services, and exposes MCP tools for agent/workflow integrations.
 
@@ -10,7 +10,7 @@ Kozen module that verifies and rectifies MongoDB IAM roles and permissions. Supp
 ### Installation
 
 ```bash
-npm install @mongodb-solution-assurance/rectification
+npm install @mongodb-solution-assurance/iam-rectification
 ```
 
 This package depends on the Kozen framework and IAM utilities, which are installed automatically:
@@ -34,7 +34,7 @@ When loaded, the module registers IoC bindings and (optionally) controllers depe
 Use the module to populate your Kozen container, then resolve and call the rectification service you need.
 
 ```ts
-import { IAMRectificationModule } from '@mongodb-solution-assurance/rectification';
+import { IAMRectificationModule } from '@mongodb-solution-assurance/iam-rectification';
 
 // 1) Register dependencies for your runtime
 const mod = new IAMRectificationModule();

@@ -8,13 +8,8 @@
  * @version 1.1.0
  */
 import path from 'path';
-import { CLIController } from '../../../applications/cli/controllers/CLIController';
-import { IArgs } from '../../../shared/models/Args';
-import { IConfig } from '../../../shared/models/Config';
-import { FileService } from '../../../shared/services/FileService';
-import { IIoC } from '../../../shared/tools';
-import { ILogger } from '../../../shared/tools/log/types';
 import { IIAMRectification, IRectificationResponse, IRectificationScramArg, IRectificationX509Arg } from '../models/IAMRectification';
+import { CLIController, FileService, IArgs, IConfig, IIoC, ILogger } from '@mongodb-solution-assurance/kozen';
 
 /**
  * @class RectificationCLIController

@@ -1,7 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp";
 import { z } from "zod";
-import { MCPController } from "../../../applications/mcp/controllers/MCPController";
 import { IIAMRectification, IRectificationOption, IRectificationOptionX509 } from "../models/IAMRectification";
+import { MCPController } from "@mongodb-solution-assurance/kozen";
 
 export class RectificationController extends MCPController {
 

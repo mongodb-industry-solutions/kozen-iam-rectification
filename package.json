@@ -1,5 +1,5 @@
 {
-  "name": "@mongodb-solution-assurance/iam-rectification",
+  "name": "@mongodb-solution-assurance/kozen-iam-rectification",
   "version": "1.0.0",
   "main": "dist/bin/index.js",
   "types": "dist/src/index.d.ts",
@@ -8,6 +8,7 @@
     "README.md"
   ],
   "scripts": {
+    "publish": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && npm run copy:txt",
     "mcp:start": "ts-node bin/kozen.ts --type=mcp",
@@ -17,7 +18,14 @@
     "type": "git",
     "url": "git+https://github.com/mongodb-industry-solutions/kozen-iam-rectification.git"
   },
-  "keywords": ["mongodb", "kozen", "mcp", "mcp-server", "iam", "iam-rectification"],
+  "keywords": [
+    "mongodb",
+    "kozen",
+    "mcp",
+    "mcp-server",
+    "iam",
+    "iam-rectification"
+  ],
   "author": "MDB SAT",
   "license": "MIT",
   "bugs": {

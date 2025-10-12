@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run copy:txt",
     "mcp:start": "ts-node bin/kozen.ts --type=mcp",
     "copy:txt": "copyfiles -u 1 src/**/*.txt dist/src"
   },
@@ -16,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/mongodb-industry-solutions/kozen-iam-rectification.git"
   },
-  "keywords": [],
+  "keywords": ["mongodb", "kozen", "mcp", "mcp-server", "iam", "iam-rectification"],
   "author": "MDB SAT",
   "license": "MIT",
   "bugs": {

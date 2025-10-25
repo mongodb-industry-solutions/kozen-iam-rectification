@@ -87,7 +87,7 @@ export class RectificationCLIController extends CLIController {
     public async help(): Promise<void> {
         const dir = process.env.DOCS_DIR || path.resolve(__dirname, '../docs');
         const helpText = await this.srvFile?.select('rectification', dir);
-        console.log(helpText);
+        super.help('TOOL: IAM Rectification', helpText);
     }
 
     public async fill(args: string[] | IArgs): Promise<IRectificationScramArg> {

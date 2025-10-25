@@ -3,7 +3,7 @@
         "target": "RectificationCLIController",
         "type": "class",
         "lifetime": "transient",
-        "path": "../../../modules/rectification/controllers",
+        "path": "controllers",
         "dependencies": [
             {
                 "key": "assistant",

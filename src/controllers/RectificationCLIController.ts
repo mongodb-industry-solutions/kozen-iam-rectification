@@ -96,7 +96,7 @@ export class RectificationCLIController extends CLIController {
         parsed.isCluster = parsed.isCluster !== undefined ? parsed.isCluster : true;
         parsed.uriEnv = parsed.uriEnv || process.env.KOZEN_IAM_URI_ENV;
         parsed.protocol = parsed.protocol || (parsed.isCluster ? "mongodb+srv" : "mongodb");
-        parsed.action = parsed.action + parsed.method;
+        parsed.action = parsed.action !== 'help' ? parsed.action + parsed.method : parsed.action;
         parsed.permissions = typeof parsed.permissions === "string" ? (parsed.permissions as unknown as string).split(",").map(p => p.trim()) : parsed.permissions;
         return parsed as IRectificationScramArg;
     }

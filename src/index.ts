@@ -8,7 +8,7 @@ export class IAMRectificationModule extends KzModule {
     constructor(dependency?: any) {
         super(dependency);
         this.metadata.summary = 'Module for IAM Rectification functionalities';
-        this.metadata.alias = 'rectification';
+        this.metadata.alias = 'iam-rectification';
     }
 
     public register(config: IConfig | null, opts?: any): Promise<Record<string, IDependency> | null> {

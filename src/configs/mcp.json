@@ -1,5 +1,5 @@
 {
-    "rectification:controller:mcp": {
+    "iam-rectification:controller:mcp": {
         "target": "RectificationMCPController",
         "type": "class",
         "lifetime": "transient",
@@ -16,13 +16,18 @@
                 "type": "ref"
             },
             {
+                "key": "srvFile",
+                "target": "core:file",
+                "type": "ref"
+            },
+            {
                 "key": "srvIAMScram",
-                "target": "iam:rectification:scram",
+                "target": "iam-rectification:scram",
                 "type": "ref"
             },
             {
                 "key": "srvIAMX509",
-                "target": "iam:rectification:x509",
+                "target": "iam-rectification:x509",
                 "type": "ref"
             }
         ]

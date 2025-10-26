@@ -1,18 +1,23 @@
 {
   "name": "@mongodb-solution-assurance/kozen-iam-rectification",
-  "version": "1.0.0",
-  "main": "dist/bin/index.js",
-  "types": "dist/src/index.d.ts",
+  "version": "1.0.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/*",
+    "LICENSE",
     "README.md"
   ],
   "scripts": {
     "publish": "npm publish --access public",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run copy:txt",
     "mcp:start": "ts-node bin/kozen.ts --type=mcp",
-    "copy:txt": "copyfiles -u 1 src/**/*.txt dist/src"
+    "start": "npm run bin:kozen:js --config=kozen.js.json",
+    "dev": "npm run bin:kozen:ts --config=kozen.ts.json",
+    "build": "tsc && npm run copy:txt",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy:txt": "copyfiles -u 1 src/**/*.txt dist/",
+    "bin:kozen:ts": "ts-node node_modules/@mongodb-solution-assurance/kozen/dist/bin/kozen.js",
+    "bin:kozen:js": "npx kozen"
   },
   "repository": {
     "type": "git",
@@ -35,7 +40,7 @@
   "description": "Module for the Kozen framework that includes support for running the IAM rectification process",
   "dependencies": {
     "@mongodb-solution-assurance/iam-util": "^1.0.3",
-    "@mongodb-solution-assurance/kozen": "^1.0.6"
+    "@mongodb-solution-assurance/kozen": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^24.7.2",

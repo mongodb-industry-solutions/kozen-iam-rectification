@@ -22,8 +22,8 @@ This package depends on the Kozen framework and IAM utilities, which are install
 When loaded, the module registers IoC bindings and (optionally) controllers depending on the chosen runtime type:
 
 - IoC services (always registered)
-  - `iam:rectification:scram` → SCRAM rectification service
-  - `iam:rectification:x509` → X.509 rectification service
+  - `iam-rectification:scram` → SCRAM rectification service
+  - `iam-rectification:x509` → X.509 rectification service
 
 - Controllers (registered by type)
   - type `cli` → `RectificationCLIController`
@@ -46,7 +46,7 @@ const assistant = /* your Kozen IoC/assistant instance */;
 await assistant.registerAll(deps);
 
 // 3) Resolve and execute SCRAM rectification
-const scram = await assistant.resolve('iam:rectification:scram');
+const scram = await assistant.resolve('iam-rectification:scram');
 const result = await scram.rectify({
   // Provide either `uri` or `uriEnv`, or let the service build a URI from parts
   // uri: 'mongodb+srv://user:pass@host/?retryWrites=true&w=majority&appName=AppName',
@@ -163,7 +163,7 @@ const result = await scram.rectify({
 X.509 verification using inline PEM data:
 
 ```ts
-const x509 = await assistant.resolve('iam:rectification:x509');
+const x509 = await assistant.resolve('iam-rectification:x509');
 const report = await x509.rectify({
   uri: 'mongodb+srv://cluster.example.mongodb.net/?appName=MyApp',
   cert: process.env.CLIENT_CERT_PEM!,

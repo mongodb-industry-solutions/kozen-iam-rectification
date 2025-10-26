@@ -84,7 +84,7 @@ export class RectificationController extends MCPController {
             options.protocol = options.protocol || (options.isCluster ? "mongodb+srv" : "mongodb");
             options.permissions = typeof options.permissions === "string" ? (options.permissions as unknown as string).split(",").map(p => p.trim()) : options.permissions;
 
-            const srvIAMScram = await this.assistant?.resolve<IIAMRectification>('iam:rectification:scram');
+            const srvIAMScram = await this.assistant?.resolve<IIAMRectification>('iam-rectification:scram');
             const result = await srvIAMScram!.rectify(options);
 
             return {
@@ -114,7 +114,7 @@ export class RectificationController extends MCPController {
             options.protocol = options.protocol || (options.isCluster ? "mongodb+srv" : "mongodb");
             options.permissions = typeof options.permissions === "string" ? (options.permissions as unknown as string).split(",").map(p => p.trim()) : options.permissions;
 
-            const srvIAMX509 = await this.assistant?.resolve<IIAMRectification>('iam:rectification:x509');
+            const srvIAMX509 = await this.assistant?.resolve<IIAMRectification>('iam-rectification:x509');
             const result = await srvIAMX509!.rectify(options);
 
             return {
@@ -136,5 +136,4 @@ export class RectificationController extends MCPController {
             };
         }
     }
-
 }

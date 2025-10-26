@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "load": [
+      {
+        "name": "rectification",
+        "target": "C:\\data\\dev\\kozen-iam-rectification\\src"
+      }
+    ]
+  }
+}

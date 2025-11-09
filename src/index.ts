@@ -28,3 +28,7 @@ export class IAMRectificationModule extends KzModule {
         return Promise.resolve(dep);
     }
 }
+
+export * from "./models/IAMRectification";
+export * from "./services/IAMRectificationScram";
+export * from "./services/IAMRectificationX509";

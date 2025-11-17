@@ -43,8 +43,9 @@ See the wiki for complete guides, APIs, and examples:
 MIT © MDB SAT
 
 ## 🤖 References
-- [IAM Rectification Module](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki)
-- [Kozen Documentation](https://github.com/mongodb-industry-solutions/kozen-engine/wiki)
+- [IAM Rectification Module Full Documentation](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki)
+- [IAM Rectification Module through DeepWiki](https://deepwiki.com/mongodb-industry-solutions/kozen-iam-rectification)
+- [Kozen Full Documentation](https://github.com/mongodb-industry-solutions/kozen-engine/wiki)
 - [Homepage](https://github.com/mongodb-industry-solutions/kozen-iam-rectification#readme)
 - [Issues](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/issues)
 - [Repository](https://github.com/mongodb-industry-solutions/kozen-iam-rectification)

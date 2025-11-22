@@ -1,4 +1,4 @@
-import { IArgs } from "@mongodb-solution-assurance/kozen";
+import { IArgs } from "@kozen/engine";
 
 export interface IRectificationOption {
     host?: string;

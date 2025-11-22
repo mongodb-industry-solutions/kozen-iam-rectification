@@ -12,13 +12,18 @@ Kozen module to verify and rectify MongoDB IAM roles and permissions. Supports S
 ### 🏭 Install
 
 ```bash
-npm install @mongodb-solution-assurance/kozen-iam-rectification
+npm install @kozen/iam-rectification
 ```
 
-### 🚀 Quick start
+### 🚀 Quick start from CLI
+```
+kozen --moduleLoad=@kozen/iam-rectification --action=iam-rectification:help [options]
+```
+
+### 🚀 Quick start from Develoment
 
 ```ts
-import { IAMRectificationModule } from '@mongodb-solution-assurance/kozen-iam-rectification';
+import { IAMRectificationModule } from '@kozen/iam-rectification';
 
 const mod = new IAMRectificationModule();
 const deps = await mod.register({ type: 'cli' }); // or 'mcp' or null
@@ -33,21 +38,23 @@ const result = await scram.rectify({
 console.log(result);
 ```
 
-### 📚 Full documentation
+### 📚 References
+- [IAM Rectification Module Full Documentation](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki)
+- [IAM Rectification Module through DeepWiki](https://deepwiki.com/mongodb-industry-solutions/kozen-iam-rectification)
+- [Disclaimer and Usage Policy](https://github.com/mongodb-industry-solutions/kozen-engine/wiki/POLICY)
+- [How to Contribute to Kozen Ecosystem](https://github.com/mongodb-industry-solutions/kozen-engine/wiki/Contribute)
+- [Official Kozen Documentation](https://github.com/mongodb-industry-solutions/kozen-engine/wiki)
 
-See the wiki for complete guides, APIs, and examples:
-`https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki`
+## 🤖 Links
+- [Issues](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/issues)
+- [Repository](https://github.com/mongodb-industry-solutions/kozen-iam-rectification)
 
 ## 📋 License
 
 MIT © MDB SAT
 
-## 🤖 References
-- [IAM Rectification Module Full Documentation](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki)
-- [IAM Rectification Module through DeepWiki](https://deepwiki.com/mongodb-industry-solutions/kozen-iam-rectification)
-- [Kozen Full Documentation](https://github.com/mongodb-industry-solutions/kozen-engine/wiki)
-- [Homepage](https://github.com/mongodb-industry-solutions/kozen-iam-rectification#readme)
-- [Issues](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/issues)
-- [Repository](https://github.com/mongodb-industry-solutions/kozen-iam-rectification)
+---
 
+← Previous: [Home](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki) | Next: [Kozen Integration](https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki/Kozen-Integration) →
 
+---

@@ -1,6 +1,6 @@
 {
-  "name": "@mongodb-solution-assurance/kozen-iam-rectification",
-  "version": "1.0.6",
+  "name": "@kozen/iam-rectification",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -8,6 +8,9 @@
     "LICENSE",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "publish": "npm publish --access public",
     "mcp:start": "ts-node bin/kozen.ts --type=mcp",
@@ -16,7 +19,7 @@
     "build": "tsc && npm run copy:txt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy:txt": "copyfiles -u 1 src/**/*.txt dist/",
-    "bin:kozen:ts": "ts-node node_modules/@mongodb-solution-assurance/kozen/dist/bin/kozen.js",
+    "bin:kozen:ts": "ts-node node_modules/@kozen/engine/dist/bin/kozen.js",
     "bin:kozen:js": "npx kozen"
   },
   "repository": {
@@ -25,6 +28,7 @@
   },
   "keywords": [
     "mongodb",
+    "security",
     "kozen",
     "mcp",
     "mcp-server",
@@ -36,11 +40,11 @@
   "bugs": {
     "url": "https://github.com/mongodb-industry-solutions/kozen-iam-rectification/issues"
   },
-  "homepage": "https://github.com/mongodb-industry-solutions/kozen-iam-rectification#readme",
+  "homepage": "https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki",
   "description": "Module for the Kozen framework that includes support for running the IAM rectification process",
   "dependencies": {
-    "@mongodb-solution-assurance/iam-util": "^1.0.3",
-    "@mongodb-solution-assurance/kozen": "^1.1.10"
+    "@kozen/engine": "^1.1.14",
+    "@mongodb-solution-assurance/iam-util": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^24.7.2",

@@ -1,6 +1,6 @@
 {
   "name": "@kozen/iam-rectification",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -43,7 +43,7 @@
   "homepage": "https://github.com/mongodb-industry-solutions/kozen-iam-rectification/wiki",
   "description": "Module for the Kozen framework that includes support for running the IAM rectification process",
   "dependencies": {
-    "@kozen/engine": "^1.1.13",
+    "@kozen/engine": "^1.1.14",
     "@mongodb-solution-assurance/iam-util": "^1.0.3"
   },
   "devDependencies": {

@@ -45,6 +45,7 @@ export class IAMRectificationModule extends KzModule {
     }
 }
 
+export default IAMRectificationModule;
 export * from "./models/IAMRectification";
 export * from "./services/IAMRectificationScram";
 export * from "./services/IAMRectificationX509";

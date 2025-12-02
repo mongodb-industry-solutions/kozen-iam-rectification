@@ -9,7 +9,7 @@
  */
 import path from 'path';
 import { IIAMRectification, IRectificationResponse, IRectificationScramArg, IRectificationX509Arg } from '../models/IAMRectification';
-import { CLIController, FileService, IArgs, IConfig, IIoC, ILogger } from '@mongodb-solution-assurance/kozen';
+import { CLIController, FileService, IArgs, IConfig, IIoC, ILogger, IModule } from '@kozen/engine';
 
 /**
  * @class RectificationCLIController
@@ -85,9 +85,15 @@ export class RectificationCLIController extends CLIController {
      * @public
      */
     public async help(): Promise<void> {
+        const mod = await this.assistant?.get<IModule>('module:@kozen/iam-rectification');
         const dir = process.env.DOCS_DIR || path.resolve(__dirname, '../docs');
         const helpText = await this.srvFile?.select('rectification', dir);
-        super.help('TOOL: IAM Rectification', helpText);
+        super.help({
+            title: `'${mod?.metadata?.alias || 'IAM Rectification' }' from '${mod?.metadata?.name}' package`,
+            body: helpText,
+            version: mod?.metadata?.version,
+            uri: mod?.metadata?.uri
+        });
     }
 
     public async fill(args: string[] | IArgs): Promise<IRectificationScramArg> {
